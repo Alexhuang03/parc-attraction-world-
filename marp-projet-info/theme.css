@@ -1,0 +1,224 @@
+/* @theme projet */
+
+@import 'default';
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  font-size: 1.8em;
+}
+
+section {
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+  padding: 25px 35px;
+  background-color: #fff;
+  color: #333333;
+}
+
+section:not(.lead) {
+  justify-content: start;
+}
+
+section::after { /* pagination */
+  content: attr(data-marpit-pagination);
+  right: 40px;
+}
+
+footer {
+  left: 40px;
+}
+
+section::after,
+footer {
+  font-weight: lighter;
+  letter-spacing: 1px;
+  font-size: 0.6em;
+  color: #999;
+  font-weight: normal;
+}
+
+a {
+  color: #249c88;
+}
+
+h1, h2, h3, h4, h6 {
+  margin: 0;
+}
+
+h1 { /* Titre principal */
+  color: #2e4f52;
+  font-size: 2em;
+}
+
+table,
+tr,
+td,
+th {
+  all: unset;
+  border: solid 1px #eaeaea !important;
+  background: transparent !important;
+  font-size: 1.0em;
+}
+
+table {
+  display: table;
+  width: 100%;
+}
+
+tr {
+  display: table-row;
+}
+
+td,
+th {
+  display: table-cell;
+}
+
+th {
+  color: #216067;
+  font-weight: bolder;
+}
+
+table code {
+  background-color: transparent;
+  font-size: 1.1em;
+}
+
+code {
+  font-family: Consolas, 'Courier New', monospace;
+}
+
+pre { /* Bloc de `code` */
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  border: none;
+  padding: 12px;
+  font-size: 1em;
+}
+
+strong { /* texte en **gras** */
+  color: #01666d;
+  font-weight: bold;
+}
+
+/* Terminal affiché par '>' */
+blockquote {
+  border: solid 1px #313335;
+  padding: 20px;
+  padding-top: 40px;
+  background-color: #333;
+  border-radius: 10px;
+  color: #ccc;
+  position: relative;
+  width: 80%;
+  font-size: 0.8em;
+}
+
+/* Ronds (rouge - jaune - vert) du terminal (style : MacOS) */
+blockquote:after {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #ff4e4e;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  border-radius: 50%;
+}
+
+blockquote:before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #fac536;
+  position: absolute;
+  top: 18px;
+  left: 50px;
+  border-radius: 50%;
+}
+
+blockquote p:before {
+  content: '';
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #39ea49;
+  position: absolute;
+  top: 18px;
+  left: 80px;
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  /* Remove default bullets */
+}
+
+ul li::before {
+  content: "\2022";
+  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #216067;
+  /* Change the color */
+  font-weight: bold;
+  /* If you want it to be bold */
+  display: inline-block;
+  /* Needed to add space between the bullet and the text */
+  width: 1em;
+  /* Also needed for space (tweak if needed) */
+  margin-left: -1em;
+  /* Also needed for space (tweak if needed) */
+}
+
+
+/********************* PREMIERE SLIDE *********************/
+
+section.lead {
+  background-color: #006c74;
+  color: #ffffff; 
+  padding: 90px 35px 40px;
+  justify-content: space-between;
+}
+
+section.lead footer {
+  color: #dddddd; 
+  top: 40px;
+  font-size: 0.6em;
+}
+
+section.lead strong {
+  background-color: #00a2ad;
+  padding: 6px 10px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+section.lead h1 {
+  font-size: 2.5em;
+  color: #fff;
+}
+
+
+/********************* GANTT *********************/
+
+.grid .tick {
+  opacity: 1;
+  shape-rendering: crispEdges;
+}
+
+.taskText {
+  fill: white;
+  text-anchor: middle;
+}
+.taskTextOutsideRight {
+  fill: black !important;
+  text-anchor: start;
+}
+.taskTextOutsideLeft {
+  fill: black;
+  text-anchor: end;
+}
+.sectionTitle {
+  fill: black;
+}
